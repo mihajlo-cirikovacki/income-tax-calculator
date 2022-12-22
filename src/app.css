@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700;900&display=swap');
+
+@tailwind base;
+
+body {
+	font-family: 'Spartan', sans-serif;
+}
+
+@tailwind components;
+
+.radio-btn {
+	@apply relative w-32 h-9;
+}
+
+.radio-btn label,
+.radio-btn input {
+	@apply absolute top-0 bottom-0 left-0 right-0 block text-center;
+}
+
+.radio-btn input[type='radio'] {
+	@apply z-50 opacity-0;
+}
+
+.radio-btn input[type='radio']:checked + label {
+	@apply rounded bg-action-blueLight;
+}
+
+.radio-btn label {
+	@apply z-40 cursor-pointer leading-[2em];
+}
+
+@tailwind utilities;
+
+.inputError {
+	@apply text-red-500;
+}
