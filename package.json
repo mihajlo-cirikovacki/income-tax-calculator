@@ -1,6 +1,6 @@
 {
 	"name": "income_tax_calc",
-	"homepage": "https://income-tax-calculator-beige.vercel.app/",
+	"homepage": "https://income-tax-calc.vercel.app/",
 	"version": "1.0.0",
 	"main": "index.js",
 	"license": "MIT",
