@@ -8,11 +8,18 @@ const TaxRateInput = ({ label, register, errors }) => {
 					{label}
 				</label>
 				<input
-					{...register('taxRate', { required: 'Tax Rate is required' })}
-					type="number"
+					{...register('taxRate', {
+						required: 'Tax Rate is required',
+						pattern: {
+							value: /\d+/,
+							message: 'Number only.',
+						},
+						min: 1,
+						max: 100,
+					})}
 					id="taxRate"
-					className="w-20 py-2 pl-4 font-bold tracking-tight rounded-lg appearance-none bg-calc-screenBg"
-					placeholder="%"
+					className="w-24 py-2 pl-4 font-bold tracking-tight rounded-lg appearance-none bg-calc-screenBg"
+					placeholder="1-100%"
 				/>
 			</div>
 			{errors.taxRate && <p className="inputError">{errors.taxRate.message}</p>}

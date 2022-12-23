@@ -6,7 +6,7 @@ const Nav = () => {
 
 	return (
 		<nav className="flex 2xl:w-1/2 xl:w-2/3 lg:w-5/6 sm:w-[98%] w-full">
-			<ul className="flex gap-2 font-medium bold">
+			<ul className="flex gap-2 font-semibold">
 				<li>
 					<NavLink
 						to="/"

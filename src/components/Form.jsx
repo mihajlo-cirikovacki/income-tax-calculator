@@ -23,7 +23,7 @@ const Form = () => {
 
 	return (
 		<form
-			className="flex flex-col lg:gap-12 sm:gap-8 gap-14"
+			className="flex flex-col gap-10 lg:gap-12 sm:gap-8"
 			onSubmit={submit((data) => handleSubmit(data))}
 		>
 			<TotalInput

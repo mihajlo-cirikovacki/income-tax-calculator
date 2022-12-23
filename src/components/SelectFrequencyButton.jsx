@@ -11,7 +11,7 @@ const SelectFrequencyButton = ({ handler, className }) => {
 			onChange={handler}
 			defaultValue={incomes.frequency}
 			className={c(
-				'sm:self-center self-start px-4 py-2 border-none bg-action-orange hover:bg-action-orangeLight  rounded-lg  cursor-pointer transition duration-150 ease-in-out ',
+				'sm:self-center self-start px-4 py-2 border-none bg-action-orange hover:bg-action-orangeLight rounded-lg cursor-pointer transition duration-150 ease-in-out',
 				className
 			)}
 		>

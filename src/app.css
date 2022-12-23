@@ -22,7 +22,7 @@ body {
 }
 
 .radio-btn input[type='radio']:checked + label {
-	@apply rounded bg-action-blueLight;
+	@apply rounded bg-action-turquoiseDarker;
 }
 
 .radio-btn label {

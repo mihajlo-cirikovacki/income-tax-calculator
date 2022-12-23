@@ -8,7 +8,7 @@ const GrossNetPicker = ({ label, register, errors }) => {
 					<label htmlFor="type">{label}</label>
 				</div>
 				<div className="flex gap-3 sm:self-end">
-					<div className="w-24 pt-1 transition duration-150 ease-in-out rounded-lg radio-btn bg-action-blue hover:bg-action-blueLight">
+					<div className="w-24 pt-1 transition duration-150 ease-in-out rounded-lg radio-btn bg-action-turquoise hover:bg-action-turquoiseDarker">
 						<input
 							{...register('type', { required: 'Type is required' })}
 							type="radio"
@@ -18,7 +18,7 @@ const GrossNetPicker = ({ label, register, errors }) => {
 						/>
 						<label htmlFor="gross">Gross</label>
 					</div>
-					<div className="w-24 pt-1 transition duration-150 ease-in-out rounded-lg radio-btn bg-action-blue hover:bg-action-blueLight">
+					<div className="w-24 pt-1 transition duration-150 ease-in-out rounded-lg radio-btn bg-action-turquoise hover:bg-action-turquoiseDarker">
 						<input
 							{...register('type', { required: 'Type is required' })}
 							type="radio"
