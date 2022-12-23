@@ -15,7 +15,7 @@ const TotalInput = ({ label, register, errors }) => {
 									value: /\d+/,
 									message: 'Number only.',
 								},
-								min: 0,
+								min: 1,
 								max: Number.MAX_SAFE_INTEGER,
 							})}
 							placeholder="greater than zero"
