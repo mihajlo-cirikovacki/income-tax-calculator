@@ -11,6 +11,7 @@ const TotalInput = ({ label, register, errors }) => {
 						<input
 							{...register('totalIncome', {
 								required: 'Income is required',
+								valueAsNumber: true,
 								pattern: {
 									value: /\d+/,
 									message: 'Number only.',
@@ -27,7 +28,7 @@ const TotalInput = ({ label, register, errors }) => {
 							className="absolute top-0 bottom-0 right-0 self-center pl-2 transition duration-150 ease-in-out rounded-r-lg cursor-pointer bg-action-turquoise hover:bg-action-turquoiseDarker"
 						>
 							{FREQUENCY_TYPES.map((freqType) => (
-								<option value={freqType}>
+								<option key={freqType} value={freqType}>
 									{freqType.replace(freqType[0], freqType[0].toUpperCase())}
 								</option>
 							))}

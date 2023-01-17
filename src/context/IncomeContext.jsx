@@ -22,26 +22,27 @@ export const IncomeContextProvider = ({ children }) => {
 		let net;
 		let tax;
 
-		if (income.type === 'gross') {
-			gross = convertIncomeFrequency(income.totalIncome, income.frequency);
-			net = Object.fromEntries(
-				Object.entries(gross).map(([key, value]) => [
-					key,
-					calculateNetIncome(value, income.taxRate),
-				])
-			);
-			tax = calculateTax(gross, net);
-		}
-
-		if (income.type === 'net') {
-			net = convertIncomeFrequency(income.totalIncome, income.frequency);
-			gross = Object.fromEntries(
-				Object.entries(net).map(([key, value]) => [
-					key,
-					calculateGrossIncome(value, income.taxRate),
-				])
-			);
-			tax = calculateTax(gross, net);
+		switch (income.type) {
+			case 'gross':
+				gross = convertIncomeFrequency(income.totalIncome, income.frequency);
+				net = Object.fromEntries(
+					Object.entries(gross).map(([key, value]) => [
+						key,
+						calculateNetIncome(value, income.taxRate),
+					])
+				);
+				tax = calculateTax(gross, net);
+				break;
+			case 'net':
+				net = convertIncomeFrequency(income.totalIncome, income.frequency);
+				gross = Object.fromEntries(
+					Object.entries(net).map(([key, value]) => [
+						key,
+						calculateGrossIncome(value, income.taxRate),
+					])
+				);
+				tax = calculateTax(gross, net);
+				break;
 		}
 
 		setIncomes({

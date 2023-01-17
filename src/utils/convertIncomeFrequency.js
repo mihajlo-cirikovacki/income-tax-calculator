@@ -13,7 +13,7 @@ export const convertIncomeFrequency = (income, frequency) => {
 			annually = income * 12;
 			break;
 		case 'annually':
-			annually = +income;
+			annually = income;
 			break;
 	}
 

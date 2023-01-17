@@ -6,7 +6,7 @@ import TableReport from './TableReport';
 
 const IncomeDetails = () => {
 	const { incomes } = useIncomeContext();
-	const [userTotal, setUserTotal] = useState(+incomes.totalIncome);
+	const [userTotal, setUserTotal] = useState(incomes.totalIncome);
 
 	const handleUserSelect = (event) => {
 		let value;
