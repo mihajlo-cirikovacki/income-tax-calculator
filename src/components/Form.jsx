@@ -13,11 +13,11 @@ const Form = () => {
 		formState: { errors },
 		handleSubmit: submit,
 	} = useForm();
-	const { handleIncomes } = useIncomeContext();
+	const { dispatch } = useIncomeContext();
 	const navigate = useNavigate();
 
 	const handleSubmit = (data) => {
-		handleIncomes(data);
+		dispatch(data);
 		navigate('/income-details');
 	};
 
@@ -38,7 +38,7 @@ const Form = () => {
 					errors={errors}
 				/>
 				<GrossNetPicker
-					label="dont't forget income type!"
+					label="don't forget income type!"
 					register={register}
 					errors={errors}
 				/>
