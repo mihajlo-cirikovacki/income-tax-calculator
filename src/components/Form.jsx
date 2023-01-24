@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 
-import { useIncomeContext } from '../context/IncomeContext';
+import { handleIncomes, useIncomeContext } from '../context/IncomeContext';
 import TotalInput from './TotalInput';
 import TaxRateInput from './TaxRateInput';
 import GrossNetPicker from './GrossNetPicker';
@@ -16,15 +16,13 @@ const Form = () => {
 	const { dispatch } = useIncomeContext();
 	const navigate = useNavigate();
 
-	const handleSubmit = (data) => {
-		dispatch(data);
-		navigate('/income-details');
-	};
-
 	return (
 		<form
 			className="flex flex-col gap-10 lg:gap-12 sm:gap-8"
-			onSubmit={submit((data) => handleSubmit(data))}
+			onSubmit={submit((data) => {
+				handleIncomes(dispatch, data);
+				navigate('/income-details');
+			})}
 		>
 			<TotalInput
 				label="What is your total income?"

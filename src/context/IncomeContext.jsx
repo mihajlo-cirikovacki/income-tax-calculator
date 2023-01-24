@@ -6,7 +6,19 @@ const IncomeContext = createContext({
 	incomes: {},
 });
 
-export const useIncomeContext = () => useContext(IncomeContext);
+IncomeContext.displayName = 'IncomeContext';
+
+export const useIncomeContext = () => {
+	const context = useContext(IncomeContext);
+
+	if (context === undefined) {
+		throw new Error(
+			'useIncomeContext must be used within a IncomeContextProvider! 💥💥'
+		);
+	}
+
+	return context;
+};
 
 export const IncomeContextProvider = ({ children }) => {
 	const [incomes, dispatch] = useCalcIncomes();
@@ -16,6 +28,10 @@ export const IncomeContextProvider = ({ children }) => {
 			{children}
 		</IncomeContext.Provider>
 	);
+};
+
+export const handleIncomes = (dispatch, data) => {
+	dispatch(data);
 };
 
 export default IncomeContext;

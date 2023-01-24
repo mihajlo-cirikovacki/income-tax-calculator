@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
+import { IncomeContextProvider } from './context/IncomeContext';
 import SectionCalc from './components/Layout/SectionCalc';
 import Nav from './components/Nav';
 import TaxCalc from './components/TaxCalc';
@@ -15,11 +16,13 @@ function App() {
 		<SectionCalc>
 			<Nav />
 			<TaxCalc>
-				<Routes>
-					<Route path="/" element={<Form />} />
-					<Route path="/income-details" element={<IncomeDetails />} />
-					<Route path="*" element={<NotFound />} />
-				</Routes>
+				<IncomeContextProvider>
+					<Routes>
+						<Route path="/" element={<Form />} />
+						<Route path="/income-details" element={<IncomeDetails />} />
+						<Route path="*" element={<NotFound />} />
+					</Routes>
+				</IncomeContextProvider>
 			</TaxCalc>
 		</SectionCalc>
 	);
