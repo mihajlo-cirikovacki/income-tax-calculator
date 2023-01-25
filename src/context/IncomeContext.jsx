@@ -30,8 +30,4 @@ export const IncomeContextProvider = ({ children }) => {
 	);
 };
 
-export const handleIncomes = (dispatch, data) => {
-	dispatch(data);
-};
-
 export default IncomeContext;
