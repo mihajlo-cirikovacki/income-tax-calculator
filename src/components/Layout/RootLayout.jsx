@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SectionCalc = ({ children }) => {
+const RootLayout = ({ children }) => {
 	return (
 		<section className="flex flex-col items-center h-screen overflow-y-auto pt-5 leading-10 sm:pt-24 bg-calc-mainBg text-calc-textGray">
 			{children}
@@ -8,4 +8,4 @@ const SectionCalc = ({ children }) => {
 	);
 };
 
-export default SectionCalc;
+export default RootLayout;
