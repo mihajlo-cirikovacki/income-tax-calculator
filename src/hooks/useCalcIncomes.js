@@ -5,14 +5,15 @@ import {
 	calculateTax,
 	convertIncomeFrequency,
 } from '../utils';
+import { INCOME_TYPES } from '../constants/constants';
 
-const reducer = (state, income) => {
+export const incomeReducer = (state, income) => {
 	let gross;
 	let net;
 	let tax;
 
 	switch (income.type) {
-		case 'gross':
+		case INCOME_TYPES.gross:
 			gross = convertIncomeFrequency(income.totalIncome, income.frequency);
 			net = Object.fromEntries(
 				Object.entries(gross).map(([key, value]) => [
@@ -22,7 +23,7 @@ const reducer = (state, income) => {
 			);
 			tax = calculateTax(gross, net);
 			break;
-		case 'net':
+		case INCOME_TYPES.net:
 			net = convertIncomeFrequency(income.totalIncome, income.frequency);
 			gross = Object.fromEntries(
 				Object.entries(net).map(([key, value]) => [
@@ -32,6 +33,9 @@ const reducer = (state, income) => {
 			);
 			tax = calculateTax(gross, net);
 			break;
+		default:
+			console.error(`Unsupported type: ${income.type}`);
+			return state;
 	}
 
 	return {
@@ -45,7 +49,7 @@ const reducer = (state, income) => {
 	};
 };
 
-export const useCalcIncomes = () => {
+export const useCalcIncomes = ({ reducer = incomeReducer } = {}) => {
 	const [incomes, dispatch] = useReducer(reducer, {
 		gross: null,
 		net: null,

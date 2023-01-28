@@ -1,4 +1,5 @@
 import React from 'react';
+import { INCOME_TYPES } from '../constants/constants';
 
 const GrossNetPicker = ({ label, register, errors }) => {
 	return (
@@ -12,21 +13,21 @@ const GrossNetPicker = ({ label, register, errors }) => {
 						<input
 							{...register('type', { required: 'Type is required' })}
 							type="radio"
-							value="gross"
-							id="gross"
+							value={INCOME_TYPES.gross}
+							id={INCOME_TYPES.gross}
 							name="type"
 						/>
-						<label htmlFor="gross">Gross</label>
+						<label htmlFor={INCOME_TYPES.gross}>Gross</label>
 					</div>
 					<div className="w-24 pt-1 transition duration-150 ease-in-out rounded-lg radio-btn bg-action-turquoise hover:bg-action-turquoiseDarker">
 						<input
 							{...register('type', { required: 'Type is required' })}
 							type="radio"
-							value="net"
-							id="net"
+							value={INCOME_TYPES.net}
+							id={INCOME_TYPES.net}
 							name="type"
 						/>
-						<label htmlFor="net">Net</label>
+						<label htmlFor={INCOME_TYPES.net}>Net</label>
 					</div>
 				</div>
 			</div>
