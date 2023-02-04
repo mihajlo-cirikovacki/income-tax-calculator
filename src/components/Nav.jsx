@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { clsx as c } from 'clsx';
 
 const Nav = () => {
 	return (
@@ -8,7 +9,7 @@ const Nav = () => {
 				<li>
 					<NavLink
 						to="/"
-						className={({ isActive }) => (isActive ? 'text-red-400' : '')}
+						className={({ isActive }) => c({ 'text-red-400': isActive })}
 					>
 						<div className="px-6 rounded-t-lg 2xl:px-16 xl:px-12 lg:px-10 sm:px-8 bg-calc-folderBg">
 							Income
@@ -19,7 +20,7 @@ const Nav = () => {
 					<NavLink
 						NavLink
 						to="/income-details"
-						className={({ isActive }) => (isActive ? 'text-red-400' : '')}
+						className={({ isActive }) => c({ 'text-red-400': isActive })}
 					>
 						<div className="px-6 rounded-t-lg 2xl:px-16 xl:px-12 lg:px-10 sm:px-8 bg-calc-folderBg">
 							Details

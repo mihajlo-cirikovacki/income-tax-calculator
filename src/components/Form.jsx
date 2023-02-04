@@ -6,6 +6,7 @@ import { useIncomeContext } from '../context/IncomeContext';
 import TotalInput from './TotalInput';
 import TaxRateInput from './TaxRateInput';
 import GrossNetPicker from './GrossNetPicker';
+import { Button } from './elements/button';
 
 const Form = () => {
 	const {
@@ -41,12 +42,7 @@ const Form = () => {
 					errors={errors}
 				/>
 			</div>
-			<button
-				type="submit"
-				className="w-1/2 px-4 py-2 font-medium rounded-lg cursor-pointer sm:w-1/3 bg-action-orange hover:bg-action-orangeLight"
-			>
-				Calculate
-			</button>
+			<Button type="submit">Calculate</Button>
 		</form>
 	);
 };
