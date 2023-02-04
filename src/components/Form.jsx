@@ -6,7 +6,7 @@ import { useIncomeContext } from '../context/IncomeContext';
 import TotalInput from './TotalInput';
 import TaxRateInput from './TaxRateInput';
 import GrossNetPicker from './GrossNetPicker';
-import { Button } from './elements/button';
+import { Button } from './elements/Button';
 
 const Form = () => {
 	const {
