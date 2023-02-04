@@ -1,10 +1,7 @@
 import { useReducer } from 'react';
-import {
-	calculateGrossIncome,
-	calculateNetIncome,
-	calculateTax,
-	convertIncomeFrequency,
-} from '../utils';
+import { convertIncomeFrequency } from '../utils/convertIncomeFrequency';
+import { calcGrossIncome, calcNetIncome } from '../utils/calcGrossNetIncomes';
+import { calculateTax } from '../utils/calculateTax';
 import { INCOME_TYPES } from '../constants/constants';
 
 export const incomeReducer = (state, income) => {
@@ -18,7 +15,7 @@ export const incomeReducer = (state, income) => {
 			net = Object.fromEntries(
 				Object.entries(gross).map(([key, value]) => [
 					key,
-					calculateNetIncome(value, income.taxRate),
+					calcNetIncome(value, income.taxRate),
 				])
 			);
 			tax = calculateTax(gross, net);
@@ -28,7 +25,7 @@ export const incomeReducer = (state, income) => {
 			gross = Object.fromEntries(
 				Object.entries(net).map(([key, value]) => [
 					key,
-					calculateGrossIncome(value, income.taxRate),
+					calcGrossIncome(value, income.taxRate),
 				])
 			);
 			tax = calculateTax(gross, net);
