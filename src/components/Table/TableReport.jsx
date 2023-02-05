@@ -13,7 +13,7 @@ const TableReport = (props) => {
 	const { gross, net, tax, totalIncome } = props.incomes;
 
 	return (
-		<table className="w-full">
+		<table className="w-full" id="report-table">
 			<TableHeader>
 				{TABLE_HEADER.map((freq) => (
 					<TableHeaderCell key={freq}>{freq}</TableHeaderCell>
