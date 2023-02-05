@@ -1,7 +1,7 @@
 import React from 'react';
 import { clsx as c } from 'clsx';
-import { FREQUENCY_TYPES } from '../../constants/constants';
-import { useIncomeContext } from '../../context/IncomeContext';
+import { FREQUENCY_TYPES } from '@/constants';
+import { useIncomeContext } from '@/context/IncomeContext';
 
 const SelectFrequencyButton = ({ handler, className }) => {
 	const { incomes } = useIncomeContext();

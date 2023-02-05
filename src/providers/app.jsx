@@ -1,7 +1,7 @@
 import React from 'react';
 import { RouterProvider } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary';
-import { IncomeContextProvider } from '../context/IncomeContext';
+import { IncomeContextProvider } from '@/context/IncomeContext';
 import { routes } from '../routes/routes';
 
 const ErrorFallback = () => {

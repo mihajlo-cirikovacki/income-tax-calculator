@@ -3,7 +3,7 @@ import {
 	FREQUENCY_TYPES,
 	OPTIONS_TO_LOCALE_STRING,
 	TABLE_HEADER,
-} from '../../constants/constants';
+} from '@/constants';
 import TableHeader from './TableHeader';
 import TableHeaderCell from './TableHeaderCell';
 import TableBody from './TableBody';

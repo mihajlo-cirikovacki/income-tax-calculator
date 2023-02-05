@@ -23,6 +23,11 @@ module.exports = {
 	},
 	resolve: {
 		extensions: ['.js', '.jsx', '.json'],
+		alias: {
+			'@/components': path.resolve(__dirname, 'src/components/'),
+			'@/constants': path.resolve(__dirname, 'src/constants/'),
+			'@/context': path.resolve(__dirname, 'src/context/'),
+		},
 	},
 	module: {
 		rules: [

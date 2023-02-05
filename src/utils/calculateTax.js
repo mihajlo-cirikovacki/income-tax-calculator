@@ -1,4 +1,4 @@
-import { FREQUENCY_TYPES } from '../constants/constants';
+import { FREQUENCY_TYPES } from '@/constants';
 
 export const calculateTax = (gross, net) => {
 	const tax = {};

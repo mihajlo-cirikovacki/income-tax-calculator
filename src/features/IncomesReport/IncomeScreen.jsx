@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { OPTIONS_TO_LOCALE_STRING } from '../../constants/constants';
+import { OPTIONS_TO_LOCALE_STRING } from '@/constants';
 
 const IncomeScreen = ({ userTotal, type }) => {
 	return (

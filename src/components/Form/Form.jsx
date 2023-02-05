@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 
-import { useIncomeContext } from '../../context/IncomeContext';
+import { useIncomeContext } from '@/context/IncomeContext';
 import TotalInput from './TotalInput';
 import TaxRateInput from './TaxRateInput';
 import GrossNetPicker from '../Elements/GrossNetPicker';

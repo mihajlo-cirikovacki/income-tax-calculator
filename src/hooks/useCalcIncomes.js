@@ -2,7 +2,7 @@ import { useReducer } from 'react';
 import { convertIncomeFrequency } from '../utils/convertIncomeFrequency';
 import { calcGrossIncome, calcNetIncome } from '../utils/calcGrossNetIncomes';
 import { calculateTax } from '../utils/calculateTax';
-import { INCOME_TYPES } from '../constants/constants';
+import { INCOME_TYPES } from '@/constants';
 
 export const incomeReducer = (state, income) => {
 	let gross;
