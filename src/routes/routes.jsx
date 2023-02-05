@@ -1,19 +1,20 @@
 import React from 'react';
 import { Navigate, Outlet } from 'react-router';
 import { createBrowserRouter } from 'react-router-dom';
-import Form from '../components/Form';
-import IncomeDetails from '../components/IncomeDetails';
+
 import RootLayout from '../components/Layout/RootLayout';
-import Nav from '../components/Nav';
-import TaxCalc from '../components/TaxCalc';
+import Nav from '../components/Layout/Nav';
+import MainLayout from '../components/Layout/MainLayout';
+import Form from '../components/Form/Form';
+import IncomeDetails from '../features/IncomesReport/IncomeDetails';
 
 const App = () => {
 	return (
 		<RootLayout>
 			<Nav />
-			<TaxCalc>
+			<MainLayout>
 				<Outlet />
-			</TaxCalc>
+			</MainLayout>
 		</RootLayout>
 	);
 };

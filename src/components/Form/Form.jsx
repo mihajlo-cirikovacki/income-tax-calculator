@@ -2,11 +2,11 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 
-import { useIncomeContext } from '../context/IncomeContext';
+import { useIncomeContext } from '../../context/IncomeContext';
 import TotalInput from './TotalInput';
 import TaxRateInput from './TaxRateInput';
-import GrossNetPicker from './GrossNetPicker';
-import { Button } from './elements/Button';
+import GrossNetPicker from '../Elements/GrossNetPicker';
+import { Button } from '../Elements/Button';
 
 const Form = () => {
 	const {

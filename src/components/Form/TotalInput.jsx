@@ -1,5 +1,5 @@
 import React from 'react';
-import { FREQUENCY_TYPES } from '../constants/constants';
+import { FREQUENCY_TYPES } from '../../constants/constants';
 
 const TotalInput = ({ label, register, errors }) => {
 	return (

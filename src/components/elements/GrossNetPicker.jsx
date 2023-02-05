@@ -1,5 +1,5 @@
 import React from 'react';
-import { INCOME_TYPES } from '../constants/constants';
+import { INCOME_TYPES } from '../../constants/constants';
 
 const GrossNetPicker = ({ label, register, errors }) => {
 	return (
