@@ -1,5 +1,5 @@
 import React, { createContext, useContext } from 'react';
-import { useCalcIncomes } from '../hooks/useCalcIncomes';
+import { useCalcIncomes } from '@/hooks/useCalcIncomes';
 
 const IncomeContext = createContext({
 	dispatch: () => {},
