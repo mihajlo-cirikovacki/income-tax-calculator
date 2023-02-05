@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { useIncomeContext } from '@/context/IncomeContext';
-import IncomeScreen from './IncomeScreen';
+
 import SelectFrequencyButton from '@/components/Elements/SelectFrequencyButton';
 import TableReport from '@/components/Table/TableReport';
+import { useIncomeContext } from '@/context/IncomeContext';
+import IncomeScreen from '@/features/IncomesReport/IncomeScreen';
 
 const IncomeDetails = () => {
 	const { incomes } = useIncomeContext();

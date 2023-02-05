@@ -2,9 +2,10 @@
 	"compilerOptions": {
 		"baseUrl": "src",
 		"paths": {
-			"@components/*": ["src/components/*"],
+			"@/components/*": ["src/components/*"],
 			"@/constants/*": ["src/constants/*"],
 			"@/context/*": ["src/context/*"],
+			"@/features/*": ["src/features/*"],
 			"@/hooks/*": ["src/hooks/*"],
 			"@/providers/*": ["src/providers/*"],
 			"@/routes/*": ["src/routes/*"],
