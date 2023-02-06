@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 import { TaxRateInput } from './TaxRateInput';
 import { TotalInput } from './TotalInput';
 import { useIncomeContext } from '@/context/IncomeContext';
-import { Button, GrossNetPicker } from '@/components/Elements';
+import { Button, GrossNetPicker } from '@/components/elements';
 
 export const Form = () => {
 	const {
