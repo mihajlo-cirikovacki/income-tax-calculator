@@ -9,7 +9,7 @@ import { TableHeaderCell } from './TableHeaderCell';
 import { TableBody } from './TableBody';
 import { TableDataCell } from './TableDataCell';
 
-const TableReport = (props) => {
+export const TableReport = (props) => {
 	const { gross, net, tax, totalIncome } = props.incomes;
 
 	return (
@@ -60,5 +60,3 @@ const TableReport = (props) => {
 		</table>
 	);
 };
-
-export default TableReport;

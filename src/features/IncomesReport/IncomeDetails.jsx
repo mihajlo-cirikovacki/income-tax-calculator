@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
 import { SelectFrequencyButton } from '@/components/Elements';
-import TableReport from '@/components/Table/TableReport';
+import { TableReport } from '@/components/Table';
 import { useIncomeContext } from '@/context/IncomeContext';
-import IncomeScreen from '@/features/IncomesReport/IncomeScreen';
+import { IncomeScreen } from './IncomeScreen';
 import { DownLoadPDF } from '@/features/DownloadTablePDF';
 import downloadIcon from '../../../public/download-icon.svg';
 
-const IncomeDetails = () => {
+export const IncomeDetails = () => {
 	const { incomes } = useIncomeContext();
 	const [userTotal, setUserTotal] = useState(incomes.totalIncome);
 
@@ -38,5 +38,3 @@ const IncomeDetails = () => {
 		</section>
 	);
 };
-
-export default IncomeDetails;

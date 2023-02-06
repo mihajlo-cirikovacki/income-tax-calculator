@@ -24,7 +24,7 @@ const ErrorFallback = () => {
 	);
 };
 
-const AppProvider = () => {
+export const AppProvider = () => {
 	return (
 		<ErrorBoundary fallback={ErrorFallback}>
 			<IncomeContextProvider>
@@ -33,5 +33,3 @@ const AppProvider = () => {
 		</ErrorBoundary>
 	);
 };
-
-export default AppProvider;

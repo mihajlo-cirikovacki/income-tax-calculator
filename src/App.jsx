@@ -1,5 +1,5 @@
 import React from 'react';
-import AppProvider from '@/providers/app';
+import { AppProvider } from './providers/app';
 
 import './app.css';
 

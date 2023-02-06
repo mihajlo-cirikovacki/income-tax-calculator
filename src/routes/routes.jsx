@@ -4,7 +4,7 @@ import { createBrowserRouter } from 'react-router-dom';
 
 import { Form } from '@/components/Form';
 import { RootLayout, Nav, MainLayout } from '@/components/Layout';
-import IncomeDetails from '@/features/IncomesReport/IncomeDetails';
+import { IncomeDetails } from '@/features/IncomesReport';
 
 const App = () => {
 	return (
