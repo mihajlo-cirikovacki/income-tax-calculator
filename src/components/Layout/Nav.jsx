@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { clsx as c } from 'clsx';
 
-const Nav = () => {
+export const Nav = () => {
 	return (
 		<nav className="flex 2xl:w-1/2 xl:w-2/3 lg:w-5/6 sm:w-[98%] w-full">
 			<ul className="flex gap-2 font-semibold">
@@ -31,5 +31,3 @@ const Nav = () => {
 		</nav>
 	);
 };
-
-export default Nav;

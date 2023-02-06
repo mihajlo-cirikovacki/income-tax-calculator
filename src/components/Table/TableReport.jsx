@@ -4,10 +4,10 @@ import {
 	OPTIONS_TO_LOCALE_STRING,
 	TABLE_HEADER,
 } from '@/constants';
-import TableHeader from './TableHeader';
-import TableHeaderCell from './TableHeaderCell';
-import TableBody from './TableBody';
-import TableDataCell from './TableDataCell';
+import { TableHeader } from './TableHeader';
+import { TableHeaderCell } from './TableHeaderCell';
+import { TableBody } from './TableBody';
+import { TableDataCell } from './TableDataCell';
 
 const TableReport = (props) => {
 	const { gross, net, tax, totalIncome } = props.incomes;

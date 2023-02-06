@@ -1,7 +1,7 @@
 import React from 'react';
 import { clsx as c } from 'clsx';
 
-const Header = ({ title, logo, className }) => {
+export const Header = ({ title, logo, className }) => {
 	return (
 		<header
 			className={c([
@@ -18,5 +18,3 @@ const Header = ({ title, logo, className }) => {
 		</header>
 	);
 };
-
-export default Header;

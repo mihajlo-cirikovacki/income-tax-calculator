@@ -1,7 +1,7 @@
 import React from 'react';
 import { clsx as c } from 'clsx';
 
-const TableHeaderCell = ({ children, className }) => {
+export const TableHeaderCell = ({ children, className }) => {
 	return (
 		<th
 			className={c([
@@ -17,5 +17,3 @@ const TableHeaderCell = ({ children, className }) => {
 		</th>
 	);
 };
-
-export default TableHeaderCell;

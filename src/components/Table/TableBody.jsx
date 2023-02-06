@@ -1,7 +1,7 @@
 import React from 'react';
 import { clsx as c } from 'clsx';
 
-const TableBody = ({ children, className }) => {
+export const TableBody = ({ children, className }) => {
 	return (
 		<tbody
 			className={c([
@@ -15,5 +15,3 @@ const TableBody = ({ children, className }) => {
 		</tbody>
 	);
 };
-
-export default TableBody;

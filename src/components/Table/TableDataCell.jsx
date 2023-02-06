@@ -1,7 +1,7 @@
 import React from 'react';
 import { clsx as c } from 'clsx';
 
-const TableDataCell = ({ children, className }) => {
+export const TableDataCell = ({ children, className }) => {
 	return (
 		<td
 			className={c([
@@ -17,5 +17,3 @@ const TableDataCell = ({ children, className }) => {
 		</td>
 	);
 };
-
-export default TableDataCell;
