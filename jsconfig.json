@@ -12,5 +12,6 @@
 			"@/utils/*": ["src/utils/*"]
 		}
 	},
-	"include": ["src"]
+	"include": ["src"],
+	"moduleResolution": "node"
 }
