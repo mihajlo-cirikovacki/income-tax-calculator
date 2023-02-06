@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TaxRateInput = ({ label, register, errors }) => {
+export const TaxRateInput = ({ label, register, errors }) => {
 	return (
 		<div className="flex flex-col gap-1">
 			<div className="flex gap-2 lg:self-end sm:self-start">
@@ -26,5 +26,3 @@ const TaxRateInput = ({ label, register, errors }) => {
 		</div>
 	);
 };
-
-export default TaxRateInput;

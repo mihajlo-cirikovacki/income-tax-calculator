@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import SelectFrequencyButton from '@/components/Elements/SelectFrequencyButton';
+import { SelectFrequencyButton } from '@/components/Elements';
 import TableReport from '@/components/Table/TableReport';
 import { useIncomeContext } from '@/context/IncomeContext';
 import IncomeScreen from '@/features/IncomesReport/IncomeScreen';

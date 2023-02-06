@@ -1,7 +1,7 @@
 import React from 'react';
 import { INCOME_TYPES } from '@/constants';
 
-const GrossNetPicker = ({ label, register, errors }) => {
+export const GrossNetPicker = ({ label, register, errors }) => {
 	return (
 		<div className="flex flex-col gap-1 lg:self-end md:self-start">
 			<div className="flex flex-col gap-2 sm:flex-row">
@@ -35,5 +35,3 @@ const GrossNetPicker = ({ label, register, errors }) => {
 		</div>
 	);
 };
-
-export default GrossNetPicker;

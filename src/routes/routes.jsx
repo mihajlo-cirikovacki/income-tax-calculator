@@ -5,7 +5,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import RootLayout from '@/components/Layout/RootLayout';
 import Nav from '@/components/Layout/Nav';
 import MainLayout from '@/components/Layout/MainLayout';
-import Form from '@/components/Form/Form';
+import { Form } from '@/components/Form';
 import IncomeDetails from '@/features/IncomesReport/IncomeDetails';
 
 const App = () => {

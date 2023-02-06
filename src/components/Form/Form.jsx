@@ -2,13 +2,12 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 
+import { TaxRateInput } from './TaxRateInput';
+import { TotalInput } from './TotalInput';
 import { useIncomeContext } from '@/context/IncomeContext';
-import TotalInput from '@/components/Form/TotalInput';
-import TaxRateInput from '@/components/Form/TaxRateInput';
-import GrossNetPicker from '@/components/Elements/GrossNetPicker';
-import { Button } from '@/components/Elements/Button';
+import { Button, GrossNetPicker } from '@/components/Elements';
 
-const Form = () => {
+export const Form = () => {
 	const {
 		register,
 		formState: { errors },
@@ -46,5 +45,3 @@ const Form = () => {
 		</form>
 	);
 };
-
-export default Form;

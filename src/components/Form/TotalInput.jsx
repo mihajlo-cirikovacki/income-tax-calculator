@@ -1,7 +1,7 @@
 import React from 'react';
 import { FREQUENCY_TYPES } from '@/constants';
 
-const TotalInput = ({ label, register, errors }) => {
+export const TotalInput = ({ label, register, errors }) => {
 	return (
 		<div className="flex flex-col gap-4">
 			<label htmlFor="totalIncome">{label}</label>
@@ -42,5 +42,3 @@ const TotalInput = ({ label, register, errors }) => {
 		</div>
 	);
 };
-
-export default TotalInput;

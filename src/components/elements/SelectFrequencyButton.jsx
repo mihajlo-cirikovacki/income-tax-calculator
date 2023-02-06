@@ -3,7 +3,7 @@ import { clsx as c } from 'clsx';
 import { FREQUENCY_TYPES } from '@/constants';
 import { useIncomeContext } from '@/context/IncomeContext';
 
-const SelectFrequencyButton = ({ handler, className }) => {
+export const SelectFrequencyButton = ({ handler, className }) => {
 	const { incomes } = useIncomeContext();
 
 	return (
@@ -34,5 +34,3 @@ const SelectFrequencyButton = ({ handler, className }) => {
 		</select>
 	);
 };
-
-export default SelectFrequencyButton;
